@@ -24,7 +24,7 @@ def isValid(board, i, j, evalNum):
 def getNextValid(board, i, j):
   if board[i][j] == 9:
     return 0
-  for nextNum in range(int(board[i][j] + 1), 10):
+  for nextNum in range(board[i][j] + 1, 10):
     if isValid(board, i, j, nextNum):
       return nextNum
   return 0
